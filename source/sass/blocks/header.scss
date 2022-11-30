@@ -1,197 +1,83 @@
-.header-container {
+.page-header {
   position: relative;
   width: 100%;
-  min-height: 880px;
-  background-color: $color-dark-grey;
-  background-image: $dark-grey-to-top, url("../img/jpeg/background.jpg");
+  min-height: 650px;
+  background-color: $color-dark-blue;
+  background-image: url("../img/jpeg/background-header.jpg");
   background-size: cover;
-  margin-bottom: 120px;
+  background-position: 0 50%;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 
   @include retina {
-    background-image: $dark-grey-to-top, url("../img/jpeg/background@2x.jpg");
+    background-image: url("../img/jpeg/background-header@2x.jpg");
   }
 
   @include vp-1023 {
-    min-height: 640px;
-    background-position: 20% 50%;
-    margin-bottom: 80px;
+    min-height: 638px;
+    background-position: -41px 50%;
   }
 
   @include vp-767 {
-    min-height: 560px;
-    background-position: 25% 50%;
-    margin-bottom: 50px;
+    background-position: -248px -48px;
   }
 }
 
-.header-container__cap-background {
-  position: fixed;
-  left: 0;
-  right: 0;
-  width: 100%;
-  max-width: 1920px;
-  min-height: 120px;
+.page-header__title {
+  max-width: 1240px;
+  padding: 20px;
+  padding-top: 156px;
+  padding-left: 144px;
   margin: 0 auto;
-  background-image: $black-to-top;
-  z-index: 1;
 
   @include vp-1023 {
-    position: absolute;
-    left: 0;
-    min-height: 100px;
-    padding: 0;
+    width: 100%;
+    padding-top: 180px;
+    padding-left: 45px;
   }
 
   @include vp-767 {
-    min-height: 70px;
-    padding: 0;
+    padding: 15px;
+    padding-top: 107px;
   }
 }
 
-.header-container__cap {
-  max-width: 1264px;
-  min-height: 120px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-
-  @include vp-1023 {
-    min-height: 100px;
-    padding: 0 25px;
-  }
-
-  @include vp-767 {
-    min-height: 70px;
-    padding: 0 15px;
-  }
-}
-
-.header-container__logo-link {
-  display: block;
-  /*width: 17%;*/
-  padding: 30px 0;
-  cursor: pointer;
-
-  @include vp-1023 {
-    padding: 20px 25px;
-  }
-
-  @include vp-767 {
-    padding: 17px 10px;
-  }
-}
-
-.header-container__logo-link-desktop {
-  display: block;
-  width: 215px;
-  height: 55px;
-
-  @include vp-767 {
-    display: none;
-  }
-}
-
-.header-container__logo-modile {
-  display: none;
-
-  @include vp-767 {
-    display: block;
-    width: 35px;
-    height: 35px;
-  }
-}
-
-.header-container__info {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 47%;
-  padding: 35px 0;
-
-  @include vp-1023 {
-    width: 17%;
-    margin-right: 32px;
-    min-width: 100px;
-    padding: 0;
-    justify-content: unset;
-  }
-
-  @include vp-767 {
-    width: 43%;
-    margin-right: 10px;
-  }
-}
-
-.header-container__link {
-  width: 50%;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-
-  @include vp-1023 {
-    padding: 30px 20px;
-  }
-
-  @include vp-767 {
-    padding: 20px;
-  }
-}
-
-.header-container__link span {
-  padding-left: 15px;
-  font-family: $font-pt-mono;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
-  color: $color-light-grey;
-
-  &:hover {
-    color: $color-light-blue;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
-
-  @include vp-1023 {
-    display: none;
-  }
-}
-
-.header-container__button {
-  display: block;
-  min-width: 160px;
-  min-height: 40px;
-  padding: 10px;
-  margin: 35px;
-  margin-right: 62px;
-  box-sizing: border-box;
-  border: 1px solid $color-light-grey;
-  border-radius: 3px;
-  background-color: $color-transparent;
-  font-family: $font-roboto-condensed;
-  font-size: 14px;
+.page-header__title h2 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: $Montserrat;
   font-weight: 700;
-  line-height: 17px;
-  letter-spacing: 0.05em;
-  color: $color-light-grey;
-  text-transform: uppercase;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $color-light-blue;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
+  font-size: 54px;
+  line-height: 66px;
+  color: $color-white-grey;
 
   @include vp-1023 {
-    display: none;
+    font-size: 50px;
+    line-height: 61px;
+    margin-bottom: 13px;
+  }
+
+  @include vp-767 {
+    font-size: 36px;
+    line-height: 125%;
+  }
+}
+
+.page-header__title p {
+  margin: 0;
+  font-family: $Montserrat;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: $color-white-grey;
+
+  @include vp-1023 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @include vp-767 {
+    width: 70%;
+    font-size: 16px;
+    line-height: 140%;
   }
 }

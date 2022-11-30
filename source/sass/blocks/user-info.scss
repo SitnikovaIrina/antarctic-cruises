@@ -1,11 +1,17 @@
 .user-info {
   width: 100%;
-  min-height: 840px;
+  min-height: 555px;
   padding: 0 40px;
-  background-image: $dark-blue-to-light-blue;
+  background-image: url("../img/jpeg/background-form.jpg");
   background-color: $color-light-blue;
+  background-size: cover;
+  background-position: 0 4%;
 
-  @include vp-1023 {
+  @include retina {
+    background-image: url("../img/jpeg/background-form@2x.jpg");
+  }
+
+  /*@include vp-1023 {
     min-height: 580px;
     padding: 0 50px;
     background-image: none;
@@ -15,47 +21,79 @@
   @include vp-767 {
     min-height: 750px;
     padding: 0 25px;
-  }
+  }*/
 }
 
 .user-info__wrapper {
-  position: relative;
-  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1056px;
   margin: 0 auto;
-  padding-top: 165px;
-
-  &::after {
-    position: absolute;
-    content: "";
-    top: 40%;
-    right: 58%;
-    width: 510px;
-    height: 285px;
-    background-image: url("../img/png/paper-airplane.png");
-    background-size: 510px 285px;
-    background-repeat: no-repeat;
-    background-position: 50% 30%;
-
-    @include retina {
-      background-image: url("../img/png/paper-airplane@2x.png");
-    }
-  }
+  padding-top: 50px;
 
   @include vp-1023 {
     padding-top: 45px;
-
-    &::after {
-      display: none;
-    }
   }
 }
 
-.user-info__wrapper-form {
-  width: 49%;
-  margin-left: auto;
+.user-info__wrapper-text {
+  padding: 15px;
+  padding-top: 163px;
+  width: 50%;
+}
+
+.user-info__wrapper h2 {
+  margin: 0;
+  margin-bottom: 8px;
+  font-family: $Montserrat;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+  align-items: center;
 
   @include vp-1023 {
-    width: 100%;
-    margin-left: 0;
+    font-size: 34px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 130%;
+  }
+}
+
+.user-info__wrapper p {
+  width: 70%;
+  margin: 0;
+  font-family: $Montserrat;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  align-items: center;
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 140%;
+  }
+}
+
+.user-info__form {
+  min-height: 455px;
+  padding: 49px;
+  padding-top: 45px;
+  width: 38%;
+  background-color: $color-dark-blue;
+}
+
+.user-info__form h3 {
+  margin: 0;
+  margin-bottom: 26px;
+  font-family: $Montserrat;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: $color-white-grey;
+
+  @include vp-767 {
+    line-height: 140%;
   }
 }

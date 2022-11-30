@@ -1,19 +1,36 @@
 .advantages {
   width: 100%;
-  max-width: 1262px;
+  min-height: 562px;
+  background-image: $light-blue-to-white, url("../img/jpeg/background-advantages.jpg");
+  background-size: cover;
+  background-position: 20% 52%;
+  background-color: $color-light-blue;
+
+  @include retina {
+    background-image: $light-blue-to-white, url("../img/jpeg/background-advantages@2x.jpg");
+  }
+
+  /*@include vp-1023 {}
+  @include vp-767 {}*/
+}
+
+.advantages__wrapper {
+  opacity: 1;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
-  margin-bottom: 120px;
+  padding: 13px;
+  padding-left: 30px;
+  padding-top: 110px;
+}
 
-  @include vp-1023 {
-    padding: 0 50px;
-    margin-bottom: 75px;
-  }
-
-  @include vp-767 {
-    padding: 0 25px;
-    margin-bottom: 47px;
-  }
+.advantages h2 {
+  width: 20%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  font-family: $Montserrat;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
 }
 
 .advantages ul {
@@ -21,9 +38,9 @@
   margin: 0;
   list-style-type: none;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: min-content;
+  gap: 40px;
 
   @include vp-767 {
     grid-template-columns: 1fr;
@@ -32,13 +49,11 @@
 }
 
 .advantages__item {
-  min-height: 300px;
-  border: 1px solid $color-grey;
-  border-left: 5px solid $color-light-blue;
-  padding: 40px;
-  cursor: pointer;
+  min-height: 241px;
+  padding: 30px;
+  background-color: $color-white-grey;
 
-  @include vp-1023 {
+  /*@include vp-1023 {
     padding-bottom: 30px;
   }
 
@@ -47,98 +62,60 @@
     padding-top: 30px;
     padding-right: 30px;
     min-height: 340px;
-
-    &--privacy,
-    &--price {
-      min-height: 325px;
-
-      h3 {
-        margin-bottom: 10px;
-      }
-    }
-  }
+  }*/
 }
-
-.advantages li {
-  &:hover {
-    background-color: $color-light-blue;
-
-    h3,
-    p {
-      color: $color-light-grey;
-    }
-
-    svg {
-      use {
-        fill: $color-light-grey;
-      }
-    }
-  }
-
-  @include vp-1023 {
-    @include hover-focus {
-      background-color: $color-default-white;
-
-      h3 {
-        color: $color-light-blue;
-      }
-
-      p {
-        color: $color-dark-grey;
-      }
-
-      svg {
-        use {
-          fill: $color-light-blue;
-        }
-      }
-    }
-  }
-}
-
 
 .advantages h3 {
-  font-family: $font-roboto-condensed;
+  font-family: $Montserrat;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  align-items: center;
+  margin: 10px 0;
+
+  /*@include vp-1023 {
+    margin-bottom: 9px;
+    line-height: 140%;
+  }
+
+  @include vp-767 {
+  }*/
+}
+
+.advantages__desk {
+  font-family: $Montserrat;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 14px;
   line-height: 140%;
   align-items: center;
-  color: $color-light-blue;
-  margin: 0;
-  margin-bottom: 13px;
-
-  @include vp-1023 {
-    margin-bottom: 9px;
-  }
-
-  @include vp-767 {
-    font-size: 20px;
-  }
-}
-
-.advantages p {
-  font-family: $font-pt-mono;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 135%;
-  color: $color-dark-grey;
   margin: 0;
 
-  @include vp-767 {
-    font-size: 14px;
+  &--allinclusive {
+    width: 95%;
   }
+
+  /*@include vp-767 {
+  }*/
 }
 
-.advantages svg {
-  fill: $color-light-blue;
-  margin-bottom: 15px;
-
+.advantages__svg {
   @include vp-1023 {
-    margin-bottom: 9px;
+    &--ship-front {
+      width: 21px;
+      height: 26px;
+    }
+
+    &--check-marks {
+      width: 27px;
+      height: 26px;
+    }
+
+    &--ship {
+      width: 36px;
+      height: 26px;
+    }
   }
 
-  @include vp-767 {
-    width: 30px;
-    height: 30px;
-  }
+  /*@include vp-767 {
+  }*/
 }

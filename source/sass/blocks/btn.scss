@@ -2,21 +2,19 @@
   display: inline-flex;
   padding: 10px 20px;
 
-  color: $color-default-white;
+  font-family: $Montserrat;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  align-items: center;
+  justify-content: center;
 
-  background-color: $color-neon-blue;
+  background-color: $color-white-grey;
   border: none;
   cursor: pointer;
 
-  transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
-  }
-
   &:disabled {
     opacity: 0.5;
-
     pointer-events: none;
   }
 
