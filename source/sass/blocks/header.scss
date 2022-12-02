@@ -5,7 +5,8 @@
   background-color: $color-dark-blue;
   background-image: url("../img/jpeg/background-header.jpg");
   background-size: cover;
-  background-position: 0 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 
   @include retina {
@@ -14,11 +15,16 @@
 
   @include vp-1023 {
     min-height: 638px;
-    background-position: -41px 50%;
   }
 
   @include vp-767 {
-    background-position: -248px -48px;
+    min-height: 500px;
+  }
+}
+
+.page-header__wrapper {
+  @include vp-767 {
+    padding: 0 14px;
   }
 }
 
@@ -36,8 +42,9 @@
   }
 
   @include vp-767 {
-    padding: 15px;
-    padding-top: 107px;
+    padding-top: 111px;
+    padding-left: unset;
+    padding-bottom: 176px;
   }
 }
 
@@ -76,7 +83,7 @@
   }
 
   @include vp-767 {
-    width: 70%;
+    width: 75%;
     font-size: 16px;
     line-height: 140%;
   }

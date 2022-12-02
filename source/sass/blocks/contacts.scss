@@ -6,18 +6,50 @@
   min-height: 546px;
   display: flex;
   justify-content: space-between;
+
+  @include vp-1023 {
+    padding: 100px 44px;
+    min-height: 535px;
+  }
+
+  @include vp-767 {
+    flex-direction: column-reverse;
+    padding: 30px 15px;
+    padding-bottom: 65px;
+    min-height: 703px;
+  }
 }
 
 .contacts__wrapper-map {
   width: 49%;
-  height: 306px;
+  min-height: 306px;
   background-color: rosybrown;
+
+  @include vp-1023 {
+    height: unset;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    min-height: 316px;
+  }
 }
 
 .contacts__wrapper-text {
   padding-left: 7px;
   padding-top: 75px;
   width: 43%;
+
+  @include vp-1023 {
+    width: 49%;
+    padding-top: 66px;
+  }
+
+  @include vp-767 {
+    padding-left: 0;
+    padding-top: 28px;
+    width: 100%;
+  }
 }
 
 .contacts h2 {
@@ -27,6 +59,10 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
+
+  @include vp-1023 {
+    margin-bottom: 27px;
+  }
 }
 
 .contacts__list {
@@ -48,6 +84,18 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
+
+  br {
+    display: none;
+  }
+
+  @include vp-1023 {
+    width: 90%;
+
+    br {
+      display: block;
+    }
+  }
 }
 
 .contacts__item a {

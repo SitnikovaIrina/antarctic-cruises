@@ -73,26 +73,12 @@
     content: "";
   }
 
-  /*@include vp-1023 {
-    padding: 10px;
-    padding-left: 21px;
-
-    &::before {
-      left: -7px;
-      top: 18px;
-    }
-  }
-
   @include vp-767 {
-    line-height: 120%;
-    padding-top: 25px;
-    padding-left: 20px;
-
-    &::before {
-      top: 31px;
-      left: -7px;
-    }
-  }*/
+    width: 80%;
+    padding: 0;
+    padding-left: 27px;
+    margin-bottom: 25px;
+  }
 }
 
 input[type="checkbox"]:checked + label::before {

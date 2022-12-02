@@ -4,6 +4,21 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 120px 10px;
+
+  @include vp-1023 {
+    min-height: unset;
+    padding: 90px 45px;
+    padding-bottom: 94px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    padding: 57px 14px;
+    //margin-top: -159px;
+    padding-bottom: 87px;
+    //background-color: $color-white-grey;
+    //z-index: 2;
+  }
 }
 
 .description__wrapper-text {
@@ -12,6 +27,17 @@
   width: 53%;
   padding: 20px;
   padding-top: 56px;
+
+  @include vp-1023 {
+    width: 87%;
+    padding: 0;
+    padding-top: 0;
+  }
+
+  @include vp-767 {
+    width: 97%;
+    margin-bottom: 33px;
+  }
 }
 
 .description h2 {
@@ -23,11 +49,14 @@
   line-height: 150%;
 
   @include vp-1023 {
+    width: 65%;
+    margin-bottom: 16px;
     font-size: 26px;
     line-height: 140%;
   }
 
   @include vp-767 {
+    width: 70%;
     font-size: 24px;
   }
 }
@@ -39,4 +68,19 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
+
+  @include vp-1023 {
+    width: 93%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.description img {
+  @include vp-1023 {
+    width: 98%;
+    padding-top: 10px;
+  }
 }
