@@ -23,9 +23,10 @@
   opacity: 1;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 13px;
-  padding-left: 30px;
   padding-top: 110px;
+  padding-left: 30px;
+  padding-right: 13px;
+  padding-bottom: 90px;
 
   @include vp-1023 {
     padding: 45px;
@@ -35,6 +36,7 @@
   @include vp-767 {
     padding: 13px;
     padding-top: 55px;
+    padding-bottom: 40px;
   }
 }
 
@@ -139,7 +141,4 @@
       height: 26px;
     }
   }
-
-  /*@include vp-767 {
-  }*/
 }

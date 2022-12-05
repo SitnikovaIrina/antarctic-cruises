@@ -70,8 +70,9 @@
 
 .catalog__item h3 {
   position: absolute;
-  left: 12%;
-  bottom: 22px;
+  left: 8%;
+  bottom: 13px;
+  padding: 10px;
   margin: 0;
   font-family: $Montserrat;
   font-weight: 500;
@@ -80,13 +81,12 @@
   color: $color-white-grey;
 
   @include vp-1023 {
-    left: 11%;
-    bottom: 27px;
+    bottom: 18px;
   }
 
   @include vp-767 {
-    left: 9%;
-    bottom: 17px;
+    left: 5%;
+    bottom: 8px;
   }
 }
 
@@ -113,6 +113,8 @@
 
 .catalog__item:hover .catalog__info {
   display: block;
+  overflow: auto;
+  height: 100%;
 }
 
 .catalog__img {
@@ -121,83 +123,43 @@
   object-fit: cover;
   object-position: center center;
 
-  /*&--astoria {
-    object-position: -167px 0;
+  &--astoria {
+    object-position: center center;
   }
 
   &--atlantis-1 {
-    object-position: -254px 0;
+    object-position: center center;
   }
 
   &--atlantis {
-    object-position: -127px 0;
+    object-position: center center;
   }
 
   &--odysseus {
     width: 110%;
     height: 110%;
-    object-position: -122px -3px;
+    object-position: center bottom;
   }
 
   &--olympia {
     width: 110%;
     height: 110%;
-    object-position: -123px -5px;
+    object-position: center bottom;
   }
 
   &--aurora {
-    object-position: -107px 0;
+    object-position: center center;
   }
 
   &--leonor {
-    object-position: -146px 0;
+    object-position: center center;
   }
 
   &--minion {
     width: 140%;
     height: 140%;
-    object-position: -186px -10px;
+    object-position: center bottom;
   }
-
-  @include vp-1023 {
-    &--astoria {
-      object-position: -144px 0;
-    }
-
-    &--atlantis-1 {
-      object-position: -205px 0;
-    }
-
-    &--atlantis {
-      object-position: -103px 0;
-    }
-
-    &--odysseus {
-      width: 120%;
-      height: 120%;
-      object-position: -114px -6px;
-    }
-
-    &--olympia {
-      width: 115%;
-      height: 115%;
-      object-position: -140px 0;
-    }
-
-    &--aurora {
-      object-position: -107px 0;
-    }
-
-    &--leonor {
-      object-position: -125px 0;
-    }
-
-    &--minion {
-      width: 140%;
-      height: 140%;
-      object-position: -186px -10px;
-    }
-  }*/
 }
 
 .catalog__info h4 {
@@ -239,28 +201,6 @@
 }
 
 .catalog__link-btn {
-  display: flex;
-  padding: 10px 20px;
   margin-top: auto;
-
-  font-family: $Montserrat;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 150%;
-  align-items: center;
-  justify-content: center;
-
-  background-color: $color-white-grey;
-  border: none;
-  cursor: pointer;
-
-  &:disabled {
-    opacity: 0.5;
-    pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
-  }
 }
 

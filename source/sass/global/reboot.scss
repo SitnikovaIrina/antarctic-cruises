@@ -11,6 +11,10 @@ body {
   min-height: 100vh;
 }
 
+body._lock {
+  overflow: hidden;
+}
+
 html {
   font-style: normal;
   font-weight: 400;

@@ -8,7 +8,7 @@
   padding: 11px 15px;
   margin-bottom: 20px;
   border: none;
-  cursor: pointer;
+  cursor: text;
 
   font-family: $Montserrat;
   font-weight: 400;
@@ -34,15 +34,6 @@
   position: relative;
   display: flex;
   align-items: center;
-
-  /*@include vp-1023 {
-    width: 47%;
-  }
-
-  @include vp-767 {
-    width: 92%;
-    margin: 0 auto;
-  }*/
 }
 
 .form__wrapper-checkbox label {

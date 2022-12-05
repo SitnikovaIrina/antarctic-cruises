@@ -16,42 +16,41 @@
     <div class="wrapper">
       <header>
         <div class="page-header">
-          <div class="page-header__wrapper">
-            <h1 class="visually-hidden">Главная страница</h1>
-            <div class="page-header__cap">
+          <h1 class="visually-hidden">Главная страница</h1>
 
-              <div class="nav nav--nojs">
-                <div class="nav__wrapper">
-                  <a class="nav__logo-link">
-                    <svg class="nav__logo-svg" role="img" aria-label="Логотип компании." aria-hidden="true" focusable="false" width="70" height="38" viewBox="0 0 70 38">
-                      <use xlink:href="./img/sprite_auto.svg#logo"></use>
-                    </svg>
-                  </a>
-                  <button class="nav__button" type="button">
-                    <svg class="nav__open" role="img" aria-label="Открыть меню." aria-hidden="true" focusable="false" width="24" height="14" viewBox="0 0 24 14">
-                      <use xlink:href="./img/sprite_auto.svg#burger"></use>
-                    </svg>
-                    <svg class="nav__close" role="img" aria-label="Закрыть меню." aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 15 15">
-                      <use xlink:href="./img/sprite_auto.svg#close"></use>
-                    </svg>
-                  </button>
+          <div class="nav">
+            <div class="nav__conteiner">
+              <div class="nav__conteiner-cap">
+                <a class="nav__logo-link">
+                  <svg class="nav__logo-svg" role="img" aria-label="Логотип компании." aria-hidden="true" focusable="false" width="70" height="38" viewBox="0 0 70 38">
+                    <use xlink:href="./img/sprite_auto.svg#logo"></use>
+                  </svg>
+                </a>
+                <div class="nav__icon nav__icon--nojs">
+                  <span></span>
                 </div>
-                <ul class="nav__list">
-                  <li class="nav__item"><a class="nav__item-link" href="#advantages">Преимущества </a></li>
-                  <li class="nav__item"><a class="nav__item-link" href="#description">Направления</a></li>
-                  <li class="nav__item"><a class="nav__item-link" href="#catalog">Ближайшие круизы</a></li>
-                  <li class="nav__item"><a class="nav__item-link" href="#contacts">Контакты</a></li>
-                </ul>
               </div>
 
+              <div class="nav__menu">
+                <nav class="nav__body nav__body--nojs">
+                  <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__item-link" data-goto=".advantages" href="#advantages">Преимущества </a></li>
+                    <li class="nav__item"><a class="nav__item-link" data-goto=".description" href="#description">Направления</a></li>
+                    <li class="nav__item"><a class="nav__item-link" data-goto=".catalog" href="#catalog">Ближайшие круизы</a></li>
+                    <li class="nav__item"><a class="nav__item-link" data-goto=".contacts" href="#contacts">Контакты</a></li>
+                  </ul>
+                </nav>
+              </div>
             </div>
-            <div class="page-header__title">
-              <h2>Круизы в&nbsp;Антарктику </h2>
-              <p>Волшебный мир айсбергов и пингвинов</p>
-            </div>
+          </div>
+
+          <div class="page-header__title page-header__title--nojs">
+            <h2>Круизы в&nbsp;Антарктику </h2>
+            <p>Волшебный мир айсбергов и пингвинов</p>
           </div>
         </div>
       </header>
+
       <main>
 
         <section class="description" id="description">
@@ -125,7 +124,7 @@
                       <p>от 11500 $</p>
                     </li>
                   </ol>
-                  <a class="catalog__link-btn" href="#">Забронировать</a>
+                  <a class="catalog__link-btn btn" href="#">Забронировать</a>
                 </div>
               </li>
 
@@ -155,7 +154,7 @@
                       <p>от 14500 $</p>
                     </li>
                   </ol>
-                  <a class="catalog__link-btn" href="#">Забронировать</a>
+                  <a class="catalog__link-btn btn" href="#">Забронировать</a>
                 </div>
               </li>
 
@@ -185,7 +184,7 @@
                       <p>от 14500 $</p>
                     </li>
                   </ol>
-                  <a class="catalog__link-btn" href="#">Забронировать</a>
+                  <a class="catalog__link-btn btn" href="#">Забронировать</a>
                 </div>
               </li>
 
@@ -215,7 +214,7 @@
                       <p>от 9700 $</p>
                     </li>
                   </ol>
-                  <a class="catalog__link-btn" href="#">Забронировать</a>
+                  <a class="catalog__link-btn btn" href="#">Забронировать</a>
                 </div>
               </li>
 
@@ -245,7 +244,7 @@
                       <p>от 18600 $</p>
                     </li>
                   </ol>
-                  <a class="catalog__link-btn" href="#">Забронировать</a>
+                  <a class="catalog__link-btn btn" href="#">Забронировать</a>
                 </div>
               </li>
 
@@ -275,7 +274,7 @@
                       <p>от 11700 $</p>
                     </li>
                   </ol>
-                  <a class="catalog__link-btn" href="#">Забронировать</a>
+                  <a class="catalog__link-btn btn" href="#">Забронировать</a>
                 </div>
               </li>
 
@@ -305,7 +304,7 @@
                       <p>от 12500 $</p>
                     </li>
                   </ol>
-                  <a class="catalog__link-btn" href="#">Забронировать</a>
+                  <a class="catalog__link-btn btn" href="#">Забронировать</a>
                 </div>
               </li>
 
@@ -335,7 +334,7 @@
                       <p>от 12300 $</p>
                     </li>
                   </ol>
-                  <a class="catalog__link-btn" href="#">Забронировать</a>
+                  <a class="catalog__link-btn btn" href="#">Забронировать</a>
                 </div>
               </li>
             </ul>
@@ -349,17 +348,17 @@
               <p>Забронируйте тур<br> за 3-6 месяцев до&nbsp;даты выезда и сэкономьте до 50%</p>
             </div>
             <div class="user-info__form">
-              <h3>Оставьте заявку<br>и мы свяжемся с вами в ближайшее время</h3>
-              <form class="form" action="https://echo.htmlacademy.ru" method="get">
+              <h3>Оставьте заявку<br> и мы свяжемся с вами в ближайшее время</h3>
+              <form class="form" action="https://echo.htmlacademy.ru" method="get" id="callback-form">
                 <div class="form__info">
                   <label class="visually-hidden" for="name">Имя</label>
-                  <input type="text" name="name" id="name" required placeholder="Имя">
+                  <input type="text" name="name" id="name" minlength="1" required placeholder="Имя">
 
-                  <label class="visually-hidden" for="tel">Телефон</label>
-                  <input type="tel" name="tel" id="tel" value="" required placeholder="Телефон">
+                  <label class="visually-hidden" for="phone">Телефон</label>
+                  <input class="form__phone" type="tel" name="phone" id="phone" value="" minlength="16" required placeholder="Телефон">
 
                   <label class="visually-hidden" for="email">Email</label>
-                  <input type="email" name="email" id="email" value="" placeholder="Email">
+                  <input type="email" name="email" id="email" value="" required placeholder="Email">
                 </div>
                 <div class="form__wrapper-checkbox">
                   <div>
@@ -374,7 +373,15 @@
         </section>
 
         <section class="contacts" id="contacts">
-          <div class="contacts__wrapper-map">карта</div>
+
+          <div class="contacts__wrapper-map" id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533238!2d30.320858716382894!3d59.938716481876206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1640772251699!5m2!1sru!2sru"
+              height="335"
+              allowfullscreen=""
+              loading="lazy">
+            </iframe>
+          </div>
+
           <div class="contacts__wrapper-text">
             <h2>У вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и мы вам все расскажем.</h2>
             <ul class="contacts__list">
@@ -405,13 +412,12 @@
                 </svg>
               </a>
               <ul class="nav__list nav__list--footer">
-                <li class="nav__item nav__item--footer"><a class="nav__item-link nav__item-link--footer" href="#">Преимущества </a></li>
-                <li class="nav__item nav__item--footer"><a class="nav__item-link nav__item-link--footer" href="#">Направления</a></li>
-                <li class="nav__item nav__item--footer"><a class="nav__item-link nav__item-link--footer" href="#">Ближайшие круизы</a></li>
-                <li class="nav__item nav__item--footer"><a class="nav__item-link nav__item-link--footer" href="#">Контакты</a></li>
+                <li class="nav__item nav__item--footer"><a class="nav__item-link nav__item-link--footer" href="#advantages">Преимущества </a></li>
+                <li class="nav__item nav__item--footer"><a class="nav__item-link nav__item-link--footer" href="#description">Направления</a></li>
+                <li class="nav__item nav__item--footer"><a class="nav__item-link nav__item-link--footer" href="#catalog">Ближайшие круизы</a></li>
+                <li class="nav__item nav__item--footer"><a class="nav__item-link nav__item-link--footer" href="#contacts">Контакты</a></li>
               </ul>
             </div>
-
             <div class="social">
               <ul class="social__list">
                 <li class="social__item">
@@ -442,7 +448,9 @@
       </footer>
     </div>
 
+    <script src="https://unpkg.com/imask"></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
+
   </body>
 </html>
