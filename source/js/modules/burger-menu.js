@@ -1,5 +1,4 @@
-// меню бургер
-
+const pageHeaderWrapper = document.querySelector('.page-header__title');
 const navMenu = document.querySelector('.nav__icon');
 const navConteinerCap = document.querySelector('.nav__conteiner-cap');
 const navLogoSvg = document.querySelector('.nav__logo-svg');
@@ -15,6 +14,7 @@ if (navMenu) {
   navMenu.addEventListener('click', function () {
     document.body.classList.toggle('_lock');
     navMenu.classList.toggle('_active');
+    pageHeaderWrapper.classList.toggle('_active');
     navBody.classList.toggle('_active');
     navConteinerCap.classList.toggle('_active');
     navLogoSvg.classList.toggle('_active');
@@ -39,6 +39,7 @@ if (menuLinks.length > 0) {
       if (navMenu.classList.contains('_active')) {
         document.body.classList.remove('_lock');
         navMenu.classList.remove('_active');
+        pageHeaderWrapper.classList.remove('_active');
         navBody.classList.remove('_active');
         navConteinerCap.classList.remove('_active');
         navLogoSvg.classList.remove('_active');
@@ -52,3 +53,15 @@ if (menuLinks.length > 0) {
     }
   }
 }
+
+pageHeaderWrapper.addEventListener('click', function () {
+  if (pageHeaderWrapper.classList.contains('_active')) {
+    document.body.classList.remove('_lock');
+    navMenu.classList.remove('_active');
+    pageHeaderWrapper.classList.remove('_active');
+    navBody.classList.remove('_active');
+    navConteinerCap.classList.remove('_active');
+    navLogoSvg.classList.remove('_active');
+  }
+});
+

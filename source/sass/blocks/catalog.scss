@@ -62,10 +62,34 @@
 .catalog__item {
   position: relative;
   width: auto;
-  height: 386px;
   cursor: pointer;
   background-color: $color-dark-blue;
   overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+      background: none;
+    }
+  }
 }
 
 .catalog__item h3 {
@@ -79,6 +103,7 @@
   font-size: 18px;
   line-height: 150%;
   color: $color-white-grey;
+  z-index: 3;
 
   @include vp-1023 {
     bottom: 18px;
@@ -99,6 +124,7 @@
   background: $color-dark-blue;
   padding: 26px;
   padding-top: 30px;
+  z-index: 4;
   display: none;
 
   @include vp-1023 {
@@ -111,15 +137,19 @@
   }
 }
 
-.catalog__item:hover .catalog__info {
+.catalog__item:active .catalog__info,
+.catalog__item:hover .catalog__info,
+.catalog__item:focus-within .catalog__info {
   display: block;
   overflow: auto;
   height: 100%;
+  z-index: 4;
 }
 
 .catalog__img {
   width: 100%;
   height: 100%;
+  aspect-ratio: 9 / 13.4;
   object-fit: cover;
   object-position: center center;
 
@@ -159,6 +189,14 @@
     width: 140%;
     height: 140%;
     object-position: center bottom;
+  }
+
+  @include vp-1023 {
+    aspect-ratio: 9 / 11.24;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 9 / 12.87;
   }
 }
 
@@ -202,4 +240,5 @@
 
 .catalog__link-btn {
   margin-top: auto;
+  width: 100%;
 }
